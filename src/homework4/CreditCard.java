@@ -1,34 +1,38 @@
 package homework4;
+/*
+Создать класс CreditCard c полями номер счета, текущая сумма на счету.
+Добавьте метод, который позволяет начислять сумму на кредитную карточку.
+Добавьте метод, который позволяет снимать с карточки некоторую сумму.
+Добавьте метод, который выводит текущую информацию о карточке.
+
+Напишите программу, которая создает три объекта класса CreditCard,
+у которых заданы номер счета и начальная сумма.
+
+Тестовый сценарий для проверки:
+Положите деньги на первые две карточки и снимите с третьей.
+Выведите на экран текущее состояние всех трех карточек.
+*/
 
 public class CreditCard {
 
-    int accountNumber; //номер счета
-    int accountBalance; //текущая сумма на счету
-    int debitCard; // снимает сумму с баланса
-    int charge; //Добавляет сумму к балансу
-    int cardDetails; //Показывает номер карты и баланс
+    String accountNumber; // номер счета
+    int accountBalance; // текущая сумма на счету
 
-    public CreditCard () {
-
-    }
-    public CreditCard(int accountBalance, int accountNumber) {
-        this.accountBalance = accountBalance;
+    public CreditCard(String accountNumber, int accountBalance) {
         this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
     }
 
-    public CreditCard(int debitCard, int charge, int cardDetails) {
-        this.debitCard = debitCard;
-        this.charge = charge;
-        this.cardDetails = cardDetails;
+    public void addMoney(int amount) { // начисляем
+        accountBalance += amount;
     }
 
-    public void charge () {
-    System.out.println(charge + " начисляет сумму на кредитную карту");
-}
-public void debitCard () {
-    System.out.println(debitCard + " снимает сумму с карты");
-}
-    public void cardDetails () {
-        System.out.println(cardDetails + " текущая информация о карточке");
+    public void withdrawMoney(int amount) { // снимаем
+        accountBalance -= amount;
+    }
+
+    public void showBalance() { // выводим информацию
+        System.out.println("Account number: " + accountNumber + "  Balance: " + accountBalance);
+
     }
 }
