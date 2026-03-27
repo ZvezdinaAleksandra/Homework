@@ -6,8 +6,8 @@ public class MainATM {
         ATM atm1 = new ATM(30000, 50000, 9000);
         ATM atm2 = new ATM(900, 100, 8000);
 
-        atm.addBanknote20(1000);
-        if (atm.addBanknote20(1000)) {
+        atm.addBanknote20(1000000000);
+        if (atm.addBanknote20(-1000)) {
             System.out.println("Успех");
         } else {
             System.out.println("Ошибка");
@@ -26,6 +26,6 @@ public class MainATM {
             System.out.println("Ошибка");
         }
 
-        atm.withdraw(90089000);
+        atm.withdraw(945068910);
     }
 }

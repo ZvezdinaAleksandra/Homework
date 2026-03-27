@@ -64,7 +64,7 @@ public class ATM {
         remaining -= used20 * 20;
 
         if (remaining == 0) {
-            // списываем купюры из банкомата
+
             banknote100 -= used100;
             banknote50 -= used50;
             banknote20 -= used20;
@@ -75,7 +75,7 @@ public class ATM {
             if (used20 > 0) System.out.print("20-" + used20 + " ");
             System.out.println();
         } else {
-            System.out.println("Невозможно выдать точную сумму.");
+            System.out.println("Невозможно выдать сумму.");
         }
     }
 }

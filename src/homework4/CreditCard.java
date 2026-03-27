@@ -27,11 +27,11 @@ public class CreditCard {
         accountBalance += amount;
     }
 
-    public void withdrawMoney(int amount) { // снимаем
+    public void withdrawMoney(int amount) {
         accountBalance -= amount;
     }
 
-    public void showBalance() { // выводим информацию
+    public void showBalance() {
         System.out.println("Account number: " + accountNumber + "  Balance: " + accountBalance);
 
     }
