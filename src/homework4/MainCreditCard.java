@@ -11,7 +11,7 @@ public class MainCreditCard {
         creditCard1.addMoney(500);
         creditCard1.showBalance();
 
-        creditCard2.withdrawMoney(2000);
+        creditCard2.withdrawMoney(500000);
         creditCard2.showBalance();
     }
 

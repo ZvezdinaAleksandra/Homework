@@ -28,7 +28,11 @@ public class CreditCard {
     }
 
     public void withdrawMoney(int amount) {
-        accountBalance -= amount;
+        if (amount <= accountBalance) {
+            accountBalance = accountBalance - amount;
+        } else {
+            System.out.println("Недостаточно средств на счете!");
+        }
     }
 
     public void showBalance() {
